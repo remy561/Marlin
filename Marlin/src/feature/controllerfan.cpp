@@ -72,9 +72,11 @@ void ControllerFan::update() {
       ? settings.active_speed : settings.idle_speed
     );
 
+    uint8_t speed_mirrored = CONTROLLERFAN_SPEED_ACTIVE - speed;
+
     // Allow digital or PWM fan output (see M42 handling)
-    WRITE(CONTROLLER_FAN_PIN, speed);
-    analogWrite(pin_t(CONTROLLER_FAN_PIN), speed);
+    WRITE(CONTROLLER_FAN_PIN, speed_mirrored);
+    analogWrite(pin_t(CONTROLLER_FAN_PIN), speed_mirrored);
   }
 }
 
