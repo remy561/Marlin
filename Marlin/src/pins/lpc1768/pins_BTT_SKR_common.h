@@ -55,11 +55,12 @@
 // Temperature Sensors
 //  3.3V max when defined as an analog input
 //
+// TEMP_0_PIN broken (MAXTEMP ERROR = 0 resistance), switching to TEMP_1
+//#ifndef TEMP_0_PIN
+//  #define TEMP_0_PIN                    P0_24_A1  // A1 (T1) - (68) - TEMP_0_PIN
+//#endif
 #ifndef TEMP_0_PIN
-  #define TEMP_0_PIN                    P0_24_A1  // A1 (T1) - (68) - TEMP_0_PIN
-#endif
-#ifndef TEMP_1_PIN
-  #define TEMP_1_PIN                    P0_25_A2  // A2 (T2) - (69) - TEMP_1_PIN
+  #define TEMP_0_PIN                    P0_25_A2  // A2 (T2) - (69) - TEMP_1_PIN
 #endif
 #ifndef TEMP_BED_PIN
   #define TEMP_BED_PIN                  P0_23_A0  // A0 (T0) - (67) - TEMP_BED_PIN
